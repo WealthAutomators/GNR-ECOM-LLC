@@ -16,7 +16,7 @@ export function DealsOfTheDay() {
       <Container>
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <span className="mb-2 inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-accent">
+            <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-secondary/25 px-3 py-1 text-xs font-bold uppercase tracking-widest text-foreground">
               <Zap className="h-3.5 w-3.5" /> Limited Time
             </span>
             <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">Flash Deals</h2>

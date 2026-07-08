@@ -28,7 +28,7 @@ export function Navbar() {
   return (
     <header className="bg-white">
       <Container>
-        <div className="flex h-16 items-center gap-4 lg:h-[76px] lg:gap-8">
+        <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 lg:h-[84px] lg:grid-cols-[auto_1fr_auto] lg:gap-8">
           <Link href="/" className="flex shrink-0 items-center">
             <Image
               src="/logo/logo.svg"
@@ -36,21 +36,21 @@ export function Navbar() {
               width={248}
               height={44}
               priority
-              className="h-9 w-auto sm:h-10 lg:h-11"
+              className="h-10 w-auto sm:h-11 lg:h-12"
             />
           </Link>
 
           <nav className="hidden flex-1 items-center justify-center lg:flex">
-            <ul className="flex items-center gap-1">
+            <ul className="flex items-center gap-1.5">
               {navigationLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     className={cn(
-                      "block rounded-lg px-3.5 py-2 text-sm font-semibold uppercase tracking-wide transition-colors",
+                      "block rounded-full px-3.5 py-2 text-sm font-semibold transition-colors",
                       isActive(link.href)
-                        ? "text-secondary"
-                        : "text-foreground/75 hover:text-secondary"
+                        ? "bg-primary/8 text-primary"
+                        : "text-foreground/75 hover:text-accent"
                     )}
                   >
                     {link.label}
@@ -60,18 +60,7 @@ export function Navbar() {
             </ul>
           </nav>
 
-          <div className="ml-auto flex items-center gap-0.5 sm:gap-1 lg:ml-0">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-9 w-9"
-              onClick={() => setSearchOpen((v) => !v)}
-              aria-label="Search"
-              aria-expanded={searchOpen}
-            >
-              {searchOpen ? <X className="h-[18px] w-[18px]" /> : <Search className="h-[18px] w-[18px]" />}
-            </Button>
-
+          <div className="ml-auto flex items-center justify-end gap-0.5 sm:gap-1 lg:ml-0">
             <Button variant="ghost" size="icon" asChild className="relative h-9 w-9">
               <Link href="/wishlist" aria-label="Wishlist">
                 <Heart className="h-[18px] w-[18px]" />
@@ -103,6 +92,17 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
+              className="h-9 w-9"
+              onClick={() => setSearchOpen(true)}
+              aria-label="Search"
+              aria-expanded={searchOpen}
+            >
+              <Search className="h-[18px] w-[18px]" />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
               className="h-9 w-9 lg:hidden"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Menu"
@@ -116,16 +116,45 @@ export function Navbar() {
       <AnimatePresence initial={false}>
         {searchOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-visible border-t border-border bg-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="fixed inset-0 z-[60] bg-primary/45 backdrop-blur-sm"
           >
-            <Container className="py-3">
-              <div className="relative">
-                <HeaderSearchBar />
-              </div>
+            <button
+              type="button"
+              aria-label="Close search"
+              className="absolute inset-0"
+              onClick={() => setSearchOpen(false)}
+            />
+            <Container className="relative flex min-h-full items-start justify-center py-16 sm:py-24">
+              <motion.div
+                initial={{ opacity: 0, y: -16, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="relative w-full max-w-3xl rounded-[24px] border border-white/20 bg-white p-5 shadow-2xl sm:p-6"
+              >
+                <div className="mb-4 flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">Search the marketplace</p>
+                    <p className="text-sm text-muted-foreground">Browse electronics, home, fashion, toys, beauty, and more.</p>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-10 w-10 shrink-0"
+                    onClick={() => setSearchOpen(false)}
+                    aria-label="Close search"
+                  >
+                    <X className="h-5 w-5" />
+                  </Button>
+                </div>
+                <div className="relative">
+                  <HeaderSearchBar />
+                </div>
+              </motion.div>
             </Container>
           </motion.div>
         )}
@@ -139,7 +168,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block rounded-lg px-3 py-2 text-sm font-semibold uppercase tracking-wide hover:bg-muted"
+                    className="block rounded-2xl px-3 py-2 text-sm font-semibold hover:bg-muted"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}

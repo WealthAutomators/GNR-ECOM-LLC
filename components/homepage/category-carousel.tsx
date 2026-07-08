@@ -27,8 +27,8 @@ export function CategoryCarousel() {
     <section className="py-12 md:py-16">
       <Container>
         <SectionHeading
-          title="Featured Departments"
-          subtitle="Shop premium products across every category — all in one trusted store."
+          title="Popular Categories"
+          subtitle="Explore the departments families shop most, from tech and home essentials to beauty, fitness, and play."
           centered
         />
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -36,9 +36,9 @@ export function CategoryCarousel() {
             <Link
               key={category.id}
               href={`/categories/${category.slug}`}
-              className="group relative block overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group relative block overflow-hidden rounded-[20px] border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src={category.image}
                   alt={category.name}

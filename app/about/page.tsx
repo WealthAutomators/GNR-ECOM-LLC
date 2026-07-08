@@ -26,26 +26,26 @@ export default function AboutPage() {
           </div>
           <PageSection title="Our Story">
             <p>
-              VALUE PARTNERS LLC was founded with a simple mission: make premium products easy to
-              shop for by bringing together quality goods across every department in one trusted
-              store. From electronics and home essentials to toys, beauty, and gaming gear — we
-              curate products that deliver real value at honest prices.
+              MAA PARTNERS LLC was founded with a simple goal: help households shop smarter by
+              bringing together dependable products from every major department in one trusted
+              marketplace. From electronics and home essentials to toys, beauty, fashion, and
+              gaming gear, we focus on everyday value without sacrificing quality.
             </p>
             <p className="mt-4">
-              Based in Chesapeake, Virginia, we work with reliable suppliers to offer competitive
-              prices without compromising on quality. Every product in our catalog is selected with
-              care, and our team is dedicated to making your shopping experience smooth from browsing
-              to checkout.
+              Based in Winston-Salem, North Carolina, we work with reliable suppliers to offer a
+              professional, family-friendly shopping experience. Every product in our catalog is
+              selected with care, and our team is committed to making browsing, ordering, and
+              returns feel simple and convenient.
             </p>
           </PageSection>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: ShoppingBag, title: "Wide Selection", desc: "13+ categories covering everything your home and family needs." },
-            { icon: Award, title: "Trusted Quality", desc: "Every product is carefully vetted for quality, value, and reliability." },
-            { icon: Heart, title: "Customer First", desc: "30-day returns, responsive support, and a satisfaction guarantee." },
-            { icon: Check, title: "Easy Shopping", desc: "One marketplace, one checkout — no jumping between multiple stores." },
+            { icon: ShoppingBag, title: "Wide Selection", desc: "13 categories covering electronics, home, family, beauty, fitness, pets, and more." },
+            { icon: Award, title: "Premium Selection", desc: "Products are chosen for consistent quality, reliability, and practical everyday use." },
+            { icon: Heart, title: "Customer First", desc: "Friendly support, simple policies, and an easy returns experience shoppers can count on." },
+            { icon: Check, title: "Easy Shopping", desc: "One marketplace, one checkout, and a polished experience across every department." },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="rounded-lg border border-border bg-card p-6 text-center shadow-sm">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">

@@ -22,7 +22,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Contact Us"
-        description="Have a question about your order or our products? Our team is here to help."
+        description="Have a question about an order, product, or policy? Our team is here to help."
         breadcrumbs={[{ label: "Contact Us" }]}
       />
 
@@ -41,7 +41,9 @@ export default function ContactPage() {
                 {
                   icon: MapPin,
                   label: "Address",
-                  value: `${company.address.street}, ${company.address.city}, ${company.address.state} ${company.address.zip}`,
+                  value: [company.address.street, `${company.address.city}, ${company.address.state}`]
+                    .filter(Boolean)
+                    .join(", "),
                 },
                 { icon: Clock, label: "Hours", value: company.hours },
               ].map(({ icon: Icon, label, value }) => (

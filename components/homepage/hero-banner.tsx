@@ -21,19 +21,22 @@ export function HeroBanner() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-primary/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-primary/40" />
+        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/45" />
       </div>
 
       <Container className="relative flex min-h-[460px] flex-col items-center justify-center py-20 text-center md:min-h-[560px] md:py-28">
+        <div className="absolute right-6 top-10 rounded-full bg-secondary px-4 py-2 text-sm font-bold text-foreground shadow-lg sm:right-10 sm:top-12">
+          Up to 50% OFF
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <span className="inline-block rounded-lg bg-secondary px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest text-white shadow-sm">
-            Quality Products. Honest Prices.
+          <span className="inline-block rounded-full bg-white/12 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-white shadow-sm backdrop-blur-sm">
+            Everyday Value. Premium Selection.
           </span>
           <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             {slide.headline}

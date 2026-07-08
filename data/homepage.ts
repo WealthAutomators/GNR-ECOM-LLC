@@ -8,12 +8,12 @@ export const heroSlides: HeroSlide[] = [
   {
     id: "1",
     image: "/hero/hero-1.jpg",
-    headline: "Everything You Need. One Trusted Store.",
+    headline: "Find More. Spend Less.",
     description:
-      "Shop premium electronics, home essentials, toys, beauty products and more.",
+      "Discover top-rated electronics, home essentials, beauty products, toys and more, all in one trusted marketplace.",
     ctaText: "Shop Now",
     ctaLink: "/shop",
-    secondaryCtaText: "Explore Deals",
+    secondaryCtaText: "Browse Deals",
     secondaryCtaLink: "/shop?sale=true",
   },
 ];
@@ -21,27 +21,27 @@ export const heroSlides: HeroSlide[] = [
 export const features: Feature[] = [
   {
     id: "1",
-    icon: "truck",
-    title: "Fast Delivery",
-    description: "Free shipping on orders over $50, with most orders arriving in 3–5 business days.",
+    icon: "star",
+    title: "Premium Selection",
+    description: "A broad mix of household favorites, electronics, fashion, and family essentials chosen for dependable quality.",
   },
   {
     id: "2",
     icon: "shield",
     title: "Secure Payments",
-    description: "Checkout is protected with industry-standard encryption on every order.",
+    description: "Shop with confidence using a polished, encrypted checkout experience designed to keep every order secure.",
   },
   {
     id: "3",
-    icon: "star",
-    title: "Premium Quality",
-    description: "Every product is carefully selected for quality, value, and reliability.",
+    icon: "truck",
+    title: "Fast Delivery",
+    description: "From everyday staples to last-minute gifts, your orders move quickly with reliable shipping updates along the way.",
   },
   {
     id: "4",
     icon: "rotate",
-    title: "30-Day Returns",
-    description: "Changed your mind? Enjoy hassle-free returns within 30 days of delivery.",
+    title: "Easy Returns",
+    description: "Need to send something back? Our return process is simple, straightforward, and built around customer convenience.",
   },
 ];
 
@@ -52,8 +52,8 @@ export const homepageDealsSlugs = [
   "electric-kettle",
   "air-fryer",
   "dog-bed",
-  "bath-towel-set",
   "sunglasses-classic",
+  "rgb-gaming-keyboard",
 ] as const;
 
 export const homepageTrendingSlugs = [
@@ -102,18 +102,18 @@ export const homepageNewArrivalSlugs = [
 
 export const promotionalBanner: PromoBanner = {
   id: "1",
-  title: "Everything For Your Everyday Life",
+  title: "Everything Your Family Needs",
   description:
-    "Browse thousands of carefully selected products across every category.",
-  buttonText: "Start Shopping",
-  buttonLink: "/shop",
+    "Quality products from every category delivered with convenience and value.",
+  buttonText: "Explore Collection",
+  buttonLink: "/categories",
   image: "/banners/featured.jpg",
 };
 
 export const featuredCollection = {
   title: "Featured Products",
   description:
-    "Hand-picked favorites across electronics, home, beauty, and more — everything you need in one trusted store.",
+    "A curated mix of customer favorites across tech, home, wellness, family, and lifestyle essentials.",
   bannerImage: "/banners/featured.jpg",
   categorySlug: "electronics",
 };
@@ -123,13 +123,13 @@ export const bestSellerTabs = [
   { label: "Electronics", slug: "electronics" },
   { label: "Home & Kitchen", slug: "home-kitchen" },
   { label: "Beauty", slug: "beauty" },
-  { label: "Sports", slug: "sports-outdoors" },
+  { label: "Fashion", slug: "fashion-accessories" },
 ];
 
 export const newsletter = {
-  title: "Join Thousands Of Happy Shoppers",
+  title: "Be First To Know About New Deals",
   description:
-    "Subscribe for exclusive discounts, new arrivals and members-only offers.",
+    "Join our mailing list and receive exclusive discounts, product launches and seasonal offers.",
   placeholder: "Enter your email address",
   buttonText: "Subscribe",
 };
@@ -143,14 +143,14 @@ export const sortOptions = [
 ];
 
 export const aboutSection = {
-  title: "Quality Products. Honest Prices.",
+  title: "Everyday Value. Premium Selection.",
   description:
-    "VALUE PARTNERS LLC brings together premium products across every category, helping families find everything they need in one trusted store. We focus on quality, honest pricing, and a smooth shopping experience from browsing to checkout.",
+    "MAA PARTNERS LLC brings together quality products across electronics, home, beauty, toys, wellness, and more so families can shop confidently from one trusted store. We focus on dependable selection, everyday value, and a warm, convenient experience from browse to checkout.",
   checklist: [
-    "Wide selection across 13+ departments",
-    "Honest, transparent pricing on everyday essentials",
-    "Fast, reliable shipping nationwide",
-    "Dedicated customer support team",
+    "Wide marketplace selection across 13 departments",
+    "Curated products for home, family, and lifestyle needs",
+    "Dependable delivery and simple returns",
+    "Friendly support focused on everyday shoppers",
   ],
   buttonText: "Learn More About Us",
   buttonLink: "/about",

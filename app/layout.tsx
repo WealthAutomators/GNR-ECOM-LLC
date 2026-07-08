@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://valuepartnersllc.com"),
+  metadataBase: new URL("https://maapartnersllc.com"),
   title: {
     default: `${company.name} — ${company.tagline}`,
     template: `%s | ${company.name}`,
   },
   description: company.description,
   keywords: [
-    "VALUE PARTNERS LLC",
+    "MAA PARTNERS LLC",
     "online marketplace",
     "electronics",
     "home essentials",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: company.name,
     title: `${company.name} — ${company.tagline}`,
     description: company.description,
-    url: "https://valuepartnersllc.com",
+    url: "https://maapartnersllc.com",
     locale: "en_US",
   },
   twitter: {
@@ -50,7 +50,7 @@ const organizationSchema = {
   description: company.description,
   email: company.email,
   slogan: company.tagline,
-  url: "https://valuepartnersllc.com",
+  url: "https://maapartnersllc.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: company.address.street,
@@ -63,7 +63,7 @@ const organizationSchema = {
     company.social.facebook,
     company.social.twitter,
     company.social.pinterest,
-  ],
+  ].filter(Boolean),
 };
 
 export default function RootLayout({

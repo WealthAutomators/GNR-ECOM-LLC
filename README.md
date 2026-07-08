@@ -1,12 +1,12 @@
-# VALUE PARTNERS LLC
+# MAA PARTNERS LLC
 
 A production-quality, reusable ecommerce storefront built with Next.js App Router, TypeScript, and Tailwind CSS.
 
-VALUE PARTNERS LLC is a modern marketplace selling premium electronics, home essentials, beauty, toys, gaming gear, pet supplies, and more — quality products at honest prices. Duplicate this repository and swap brand assets, colors, and data to launch new stores without rewriting components.
+MAA PARTNERS LLC is a modern marketplace selling electronics, home essentials, beauty, toys, gaming gear, pet supplies, and more — dependable products at everyday value. Duplicate this repository and swap brand assets, colors, and data to launch new stores without rewriting components.
 
 ## Tech Stack
 
-- **Next.js 15** (App Router)
+- **Next.js 16** (App Router)
 - **TypeScript**
 - **Tailwind CSS v4**
 - **shadcn/ui** (Radix primitives)
@@ -96,6 +96,6 @@ Use coupon code `SAVE10` on the cart page for a 10% discount.
 
 ## Brand Colors
 
-- **Primary:** Charcoal `#1F2937`
-- **Secondary:** Emerald `#10B981`
-- **Accent:** Orange `#F97316`
+- **Primary:** Burgundy `#8B1E3F`
+- **Secondary:** Soft Gold `#F4A261`
+- **Accent:** Sea Green `#2A9D8F`

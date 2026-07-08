@@ -4,17 +4,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[16px] text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-secondary shadow-sm",
-        secondary: "bg-white text-foreground border border-border hover:bg-muted",
-        outline: "border border-primary text-primary bg-transparent hover:bg-primary hover:text-white",
-        ghost: "hover:bg-muted text-foreground",
-        emerald: "bg-secondary text-white hover:bg-secondary/90 shadow-sm",
+        default: "bg-primary text-white shadow-sm hover:bg-secondary hover:text-foreground",
+        secondary: "border border-border bg-white text-foreground shadow-sm hover:bg-muted",
+        outline: "border border-primary bg-transparent text-primary hover:bg-primary hover:text-white",
+        ghost: "text-foreground hover:bg-muted",
+        emerald: "bg-secondary text-foreground shadow-sm hover:bg-primary hover:text-white",
         accent: "bg-accent text-white hover:bg-accent/90",
-        link: "text-secondary underline-offset-4 hover:underline hover:text-accent p-0 h-auto",
+        link: "h-auto p-0 text-accent underline-offset-4 hover:text-primary hover:underline",
       },
       size: {
         default: "h-11 px-6 py-2",

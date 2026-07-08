@@ -32,7 +32,7 @@ export function BestSellers() {
                 "rounded-full px-5 py-2 text-sm font-medium transition-colors",
                 activeTab === tab.slug
                   ? "bg-primary text-white"
-                  : "bg-muted text-muted-foreground hover:text-foreground"
+                  : "bg-muted text-muted-foreground hover:text-primary"
               )}
             >
               {tab.label}

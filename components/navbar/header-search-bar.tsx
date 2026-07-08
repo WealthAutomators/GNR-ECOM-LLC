@@ -53,8 +53,8 @@ export function HeaderSearchBar({ className }: HeaderSearchBarProps) {
           </button>
           <Input
             type="search"
-            placeholder="Search electronics, home, beauty, toys & more..."
-            className="h-11 w-full rounded-lg border-border bg-muted/40 pl-10 pr-4 text-sm shadow-sm focus-visible:ring-primary/25"
+            placeholder="Search electronics, home essentials, beauty, toys and more..."
+            className="h-12 w-full rounded-[18px] border-border bg-muted/50 pl-10 pr-4 text-sm shadow-sm focus-visible:ring-primary/25"
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);
@@ -66,7 +66,7 @@ export function HeaderSearchBar({ className }: HeaderSearchBarProps) {
       </form>
 
       {searchOpen && searchQuery.trim().length > 0 && (
-        <div className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-lg border border-border bg-white py-1 shadow-lg">
+        <div className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-[18px] border border-border bg-white py-1 shadow-xl">
           {searchResults.length > 0 ? (
             <>
               {searchResults.map((product) => (
@@ -90,7 +90,7 @@ export function HeaderSearchBar({ className }: HeaderSearchBarProps) {
               ))}
               <button
                 type="button"
-                className="w-full border-t border-border px-3 py-2 text-left text-sm font-medium text-primary transition-colors hover:bg-muted"
+                className="w-full border-t border-border px-3 py-2 text-left text-sm font-medium text-accent transition-colors hover:bg-muted"
                 onClick={() => {
                   router.push(`/shop?search=${encodeURIComponent(searchQuery.trim())}`);
                   setSearchOpen(false);
