@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface CountdownTimerProps {
   endTime: string;
   className?: string;
+  light?: boolean;
 }
 
 function pad(n: number) {
@@ -21,7 +23,7 @@ function calculateTimeLeft(endTime: string) {
   };
 }
 
-export function CountdownTimer({ endTime, className }: CountdownTimerProps) {
+export function CountdownTimer({ endTime, className, light }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(endTime));
 
   useEffect(() => {
@@ -38,10 +40,20 @@ export function CountdownTimer({ endTime, className }: CountdownTimerProps) {
           { label: "Sec", value: timeLeft.seconds },
         ].map((unit) => (
           <div key={unit.label} className="flex flex-col items-center">
-            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-sm font-semibold text-white">
+            <span
+              className={cn(
+                "flex h-10 w-10 items-center justify-center rounded-md text-sm font-bold",
+                light ? "bg-secondary text-white" : "bg-primary text-white"
+              )}
+            >
               {pad(unit.value)}
             </span>
-            <span className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+            <span
+              className={cn(
+                "mt-1 text-[10px] uppercase tracking-wider",
+                light ? "text-white/70" : "text-muted-foreground"
+              )}
+            >
               {unit.label}
             </span>
           </div>

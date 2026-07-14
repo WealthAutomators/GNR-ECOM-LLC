@@ -4,10 +4,10 @@ export const navigationLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
   { label: "Collections", href: "/categories" },
-  { label: "Electronics", href: "/categories/electronics" },
-  { label: "Home", href: "/categories/home-kitchen" },
-  { label: "Fashion", href: "/categories/fashion-accessories" },
+  { label: "Trending", href: "/best-sellers" },
+  { label: "Brands", href: "/shop" },
   { label: "Deals", href: "/shop?sale=true" },
+  { label: "Support", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -23,11 +23,25 @@ export const footerLinks = {
     { label: "Shop All", href: "/shop" },
     { label: "Collections", href: "/categories" },
     { label: "Electronics", href: "/categories/electronics" },
-    { label: "Home & Kitchen", href: "/categories/home-kitchen" },
+    { label: "Kitchen", href: "/categories/home-kitchen" },
     { label: "Fashion", href: "/categories/fashion-accessories" },
     { label: "Best Sellers", href: "/best-sellers" },
     { label: "Deals", href: "/shop?sale=true" },
   ],
+  company: [
+    { label: "About Us", href: "/about" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms & Conditions", href: "/terms" },
+    { label: "Refund Policy", href: "/refund" },
+  ],
+  support: [
+    { label: "Contact Us", href: "/contact" },
+    { label: "Track Order", href: "/track-order" },
+    { label: "FAQs", href: "/faq" },
+    { label: "Shipping", href: "/shipping" },
+    { label: "Returns", href: "/returns" },
+  ],
+  /* Kept for backwards compatibility with any leftover references */
   customerService: [
     { label: "Contact Us", href: "/contact" },
     { label: "Track Order", href: "/track-order" },

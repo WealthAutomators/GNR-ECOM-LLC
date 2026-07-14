@@ -41,7 +41,10 @@ export default function ContactPage() {
                 {
                   icon: MapPin,
                   label: "Address",
-                  value: [company.address.street, `${company.address.city}, ${company.address.state}`]
+                  value: [
+                    company.address.street,
+                    `${company.address.city}, ${company.address.state} ${company.address.zip}`,
+                  ]
                     .filter(Boolean)
                     .join(", "),
                 },

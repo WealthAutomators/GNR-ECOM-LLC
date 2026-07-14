@@ -2,61 +2,86 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { categories } from "@/data/categories";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { cn } from "@/lib/utils";
 
-const homepageCategorySlugs = [
+/** Trending masonry: Electronics, Home, Beauty, Kitchen, Gaming, Sports, Office, Fashion */
+const trendingSlugs = [
   "electronics",
-  "home-kitchen",
+  "home",
   "beauty",
+  "home-kitchen",
   "gaming",
   "sports-outdoors",
-  "toys-games",
-  "pet-supplies",
-  "health-wellness",
+  "office-supplies",
+  "fashion-accessories",
+] as const;
+
+/** Staggered masonry spans for visual energy */
+const masonryClass = [
+  "md:row-span-2 md:col-span-2", // large
+  "md:row-span-1",
+  "md:row-span-1",
+  "md:row-span-2",
+  "md:row-span-1 md:col-span-2",
+  "md:row-span-1",
+  "md:row-span-1",
+  "md:row-span-1",
 ];
 
 export function CategoryCarousel() {
-  const homepageCategories = homepageCategorySlugs
+  const trending = trendingSlugs
     .map((slug) => categories.find((c) => c.slug === slug))
     .filter((c): c is (typeof categories)[number] => Boolean(c));
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="bg-background py-14 md:py-20">
       <Container>
-        <SectionHeading
-          title="Popular Categories"
-          subtitle="Explore the departments families shop most, from tech and home essentials to beauty, fitness, and play."
-          centered
-        />
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {homepageCategories.map((category) => (
-            <Link
+        <div className="mb-10 max-w-2xl">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-secondary">Explore</p>
+          <h2 className="mt-2 font-heading text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
+            Trending Categories
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Large photography, bold departments — find your next favorite aisle.
+          </p>
+        </div>
+
+        <div className="grid auto-rows-[160px] grid-cols-2 gap-3 md:auto-rows-[180px] md:grid-cols-4 md:gap-4 lg:auto-rows-[200px]">
+          {trending.map((category, i) => (
+            <motion.div
               key={category.id}
-              href={`/categories/${category.slug}`}
-              className="group relative block overflow-hidden rounded-[20px] border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className={cn(masonryClass[i])}
             >
-              <div className="relative aspect-square overflow-hidden">
+              <Link
+                href={`/categories/${category.slug}`}
+                className="group relative block h-full overflow-hidden rounded-2xl"
+              >
                 <Image
                   src={category.image}
                   alt={category.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent transition-colors duration-300 group-hover:from-primary/90 group-hover:via-primary/50" />
-                <div className="absolute inset-0 flex flex-col items-start justify-end p-4">
-                  <span className="text-base font-semibold text-white drop-shadow-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-section/90 via-dark-section/30 to-transparent" />
+                <div className="absolute inset-0 flex flex-col items-start justify-end p-4 md:p-5">
+                  <span className="font-heading text-lg font-bold text-white md:text-xl">
                     {category.name}
                   </span>
-                  <span className="mt-0.5 flex items-center gap-1 text-xs font-medium text-white/0 transition-colors duration-300 group-hover:text-secondary">
+                  <span className="mt-1 flex items-center gap-1 text-xs font-semibold text-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     Shop now <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </Container>

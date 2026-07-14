@@ -1,101 +1,33 @@
-# MAA PARTNERS LLC
+# GNR ECOM LLC
 
-A production-quality, reusable ecommerce storefront built with Next.js App Router, TypeScript, and Tailwind CSS.
+Contemporary retail marketplace template — bold merchandising, navy/red brand system, and the same ecommerce engine (cart, wishlist, search, reviews, checkout demo).
 
-MAA PARTNERS LLC is a modern marketplace selling electronics, home essentials, beauty, toys, gaming gear, pet supplies, and more — dependable products at everyday value. Duplicate this repository and swap brand assets, colors, and data to launch new stores without rewriting components.
+## Brand
 
-## Tech Stack
+- **Store:** GNR ECOM LLC
+- **Tagline:** Shop Better. Live Smarter.
+- **Stack:** Next.js App Router, React 19, Tailwind CSS v4, Framer Motion, Embla
 
-- **Next.js 16** (App Router)
-- **TypeScript**
-- **Tailwind CSS v4**
-- **shadcn/ui** (Radix primitives)
-- **Lucide Icons**
-- **Framer Motion** (subtle animations)
-- **Embla Carousel**
-- **React Context** (cart, wishlist, recently viewed)
-- **localStorage** persistence (no backend)
-
-## Getting Started
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+### Product imagery (local only)
+
+Never commit Unsplash API keys. Use a local env file:
 
 ```bash
-npm run build   # Production build
-npm run start   # Start production server
+# .env.local (gitignored)
+UNSPLASH_ACCESS_KEY=your_key_here
+
+ONLY_SLUGS=noise-cancelling-headphones,smartwatch-fitness npm run images:unsplash
 ```
 
-## Customizing for a New Store
-
-To rebrand this template for a new store, edit **only** these files:
-
-| What to change | Where |
-|---|---|
-| Company name, contact, social | `data/company.ts` |
-| Brand colors | `styles/theme.ts` + `app/globals.css` |
-| Navigation & footer links | `data/navigation.ts` |
-| Categories | `data/categories.ts` |
-| Products | `data/products.ts` |
-| Homepage content | `data/homepage.ts` |
-| Testimonials | `data/testimonials.ts` |
-| Logo | `public/logo/` |
-| Hero images | `public/hero/` |
-| Banners | `public/banners/` |
-| Category images | `public/categories/` |
-| Product images | `public/products/` |
-
-Regenerate placeholder SVGs after changing products:
+Or:
 
 ```bash
-node scripts/generate-images.mjs
+UNSPLASH_ACCESS_KEY=xxxx node scripts/fetch-unsplash-api.mjs
 ```
-
-## Project Structure
-
-```
-app/                  # Next.js pages (App Router)
-components/
-  navbar/             # Sticky navigation with search
-  footer/             # Four-column footer
-  homepage/           # Homepage sections
-  product/            # Product cards, gallery, quick view
-  cart/               # Cart page
-  checkout/           # Checkout flow
-  shop/               # Shop with filters
-  ui/                 # Reusable UI primitives
-data/                 # All store content (JSON-like TS files)
-lib/                  # Utilities and constants
-hooks/                # Custom React hooks
-context/              # Cart, wishlist, recently viewed
-public/               # Static assets
-styles/               # Theme color tokens
-types/                # TypeScript interfaces
-```
-
-## Features
-
-- Full homepage with 12 sections (hero, categories, deals, best sellers, etc.)
-- Working cart with add/remove/quantity and localStorage persistence
-- Working wishlist with localStorage persistence
-- Live search filtering in navbar and shop page
-- Quick view modal on product cards
-- Product detail page with gallery, accordion, related products
-- Shop page with sidebar filters, sorting, and pagination
-- Checkout with order summary and payment form
-- Fully responsive (mobile, tablet, desktop)
-- 30 products across 13 departments
-
-## Checkout
-
-Use coupon code `SAVE10` on the cart page for a 10% discount.
-
-## Brand Colors
-
-- **Primary:** Burgundy `#8B1E3F`
-- **Secondary:** Soft Gold `#F4A261`
-- **Accent:** Sea Green `#2A9D8F`

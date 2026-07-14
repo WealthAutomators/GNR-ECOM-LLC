@@ -26,26 +26,26 @@ export default function AboutPage() {
           </div>
           <PageSection title="Our Story">
             <p>
-              MAA PARTNERS LLC was founded with a simple goal: help households shop smarter by
-              bringing together dependable products from every major department in one trusted
-              marketplace. From electronics and home essentials to toys, beauty, fashion, and
-              gaming gear, we focus on everyday value without sacrificing quality.
+              GNR ECOM LLC was founded with a bold goal: build a contemporary retail marketplace
+              where shoppers can find electronics, home, beauty, gaming, fashion, and everyday
+              essentials in one energetic destination. We focus on premium selection, commercial
+              merchandising energy, and real value.
             </p>
             <p className="mt-4">
-              Based in Winston-Salem, North Carolina, we work with reliable suppliers to offer a
-              professional, family-friendly shopping experience. Every product in our catalog is
-              selected with care, and our team is committed to making browsing, ordering, and
-              returns feel simple and convenient.
+              Based in Harrison Township, Michigan, we work with reliable suppliers to offer a
+              polished shopping experience that feels like a modern flagship store. Every product
+              in our catalog is selected with care, and our team is committed to making browsing,
+              ordering, and returns feel simple and convenient.
             </p>
           </PageSection>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: ShoppingBag, title: "Wide Selection", desc: "13 categories covering electronics, home, family, beauty, fitness, pets, and more." },
-            { icon: Award, title: "Premium Selection", desc: "Products are chosen for consistent quality, reliability, and practical everyday use." },
+            { icon: ShoppingBag, title: "Wide Selection", desc: "12 departments covering electronics, kitchen, home, beauty, gaming, fitness, pets, and more." },
+            { icon: Award, title: "Premium Selection", desc: "Products are chosen for consistent quality, reliability, and modern everyday use." },
             { icon: Heart, title: "Customer First", desc: "Friendly support, simple policies, and an easy returns experience shoppers can count on." },
-            { icon: Check, title: "Easy Shopping", desc: "One marketplace, one checkout, and a polished experience across every department." },
+            { icon: Check, title: "Easy Shopping", desc: "One marketplace, one checkout, and a dynamic retail experience across every aisle." },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="rounded-lg border border-border bg-card p-6 text-center shadow-sm">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">

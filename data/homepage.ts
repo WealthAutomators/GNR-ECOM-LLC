@@ -8,12 +8,12 @@ export const heroSlides: HeroSlide[] = [
   {
     id: "1",
     image: "/hero/hero-1.jpg",
-    headline: "Find More. Spend Less.",
+    headline: "Everything You Need.\nOne Modern Marketplace.",
     description:
-      "Discover top-rated electronics, home essentials, beauty products, toys and more, all in one trusted marketplace.",
+      "Shop electronics, home, beauty, gaming, fashion and more — bold finds curated for everyday success.",
     ctaText: "Shop Now",
     ctaLink: "/shop",
-    secondaryCtaText: "Browse Deals",
+    secondaryCtaText: "Today's Deals",
     secondaryCtaLink: "/shop?sale=true",
   },
 ];
@@ -23,7 +23,7 @@ export const features: Feature[] = [
     id: "1",
     icon: "star",
     title: "Premium Selection",
-    description: "A broad mix of household favorites, electronics, fashion, and family essentials chosen for dependable quality.",
+    description: "A bold mix of tech, home, fashion, and lifestyle essentials chosen for dependable quality.",
   },
   {
     id: "2",
@@ -35,7 +35,7 @@ export const features: Feature[] = [
     id: "3",
     icon: "truck",
     title: "Fast Delivery",
-    description: "From everyday staples to last-minute gifts, your orders move quickly with reliable shipping updates along the way.",
+    description: "From everyday staples to last-minute upgrades, your orders move quickly with reliable shipping updates.",
   },
   {
     id: "4",
@@ -48,63 +48,63 @@ export const features: Feature[] = [
 export const dealsEndTime = new Date(Date.now() + 1000 * 60 * 60 * 18).toISOString();
 
 export const homepageDealsSlugs = [
-  "wireless-earbuds",
-  "electric-kettle",
-  "air-fryer",
-  "dog-bed",
-  "sunglasses-classic",
-  "rgb-gaming-keyboard",
+  "noise-cancelling-headphones",
+  "ceramic-cookware-set",
+  "robot-vacuum",
+  "smartwatch-fitness",
+  "adjustable-dumbbells",
+  "crossbody-sling-bag",
 ] as const;
 
 export const homepageTrendingSlugs = [
-  "wireless-earbuds",
+  "noise-cancelling-headphones",
   "bluetooth-speaker",
-  "air-fryer",
-  "kids-learning-tablet",
+  "ceramic-cookware-set",
+  "robot-vacuum",
   "yoga-mat",
   "gaming-headset",
   "vitamin-c-serum-set",
-  "standing-desk-lamp",
+  "aluminum-laptop-stand",
 ] as const;
 
 export const homepageBestsellerSlugs = [
-  "wireless-earbuds",
+  "noise-cancelling-headphones",
   "bluetooth-speaker",
   "bath-towel-set",
   "yoga-mat",
-  "kids-learning-tablet",
+  "robot-vacuum",
   "coffee-grinder",
   "dog-bed",
   "electric-kettle",
 ] as const;
 
 export const homepageFeaturedSlugs = [
-  "wireless-earbuds",
-  "electric-kettle",
-  "bath-towel-set",
-  "kids-learning-tablet",
-  "standing-desk-lamp",
-  "air-fryer",
-  "yoga-mat",
-  "dog-bed",
-  "coffee-grinder",
-  "bluetooth-speaker",
+  "noise-cancelling-headphones",
+  "smartwatch-fitness",
+  "ceramic-cookware-set",
+  "robot-vacuum",
+  "weighted-throw-blanket",
+  "matte-lipstick-set",
+  "adjustable-dumbbells",
+  "aluminum-laptop-stand",
+  "crossbody-sling-bag",
+  "smart-body-scale",
 ] as const;
 
 export const homepageNewArrivalSlugs = [
-  "stem-robot-kit",
-  "vitamin-c-serum-set",
-  "baby-monitor",
-  "foam-roller",
-  "rgb-gaming-keyboard",
-  "controller-charging-dock",
+  "portable-mini-projector",
+  "matte-lipstick-set",
+  "bamboo-bath-organizer",
+  "aluminum-laptop-stand",
+  "smart-body-scale",
+  "crossbody-sling-bag",
 ] as const;
 
 export const promotionalBanner: PromoBanner = {
   id: "1",
-  title: "Everything Your Family Needs",
+  title: "Designed For Everyday Success.",
   description:
-    "Quality products from every category delivered with convenience and value.",
+    "Premium products selected to improve work, home and lifestyle.",
   buttonText: "Explore Collection",
   buttonLink: "/categories",
   image: "/banners/featured.jpg",
@@ -113,7 +113,7 @@ export const promotionalBanner: PromoBanner = {
 export const featuredCollection = {
   title: "Featured Products",
   description:
-    "A curated mix of customer favorites across tech, home, wellness, family, and lifestyle essentials.",
+    "Fresh picks across tech, home, wellness, and lifestyle — rotated for the season.",
   bannerImage: "/banners/featured.jpg",
   categorySlug: "electronics",
 };
@@ -121,15 +121,15 @@ export const featuredCollection = {
 export const bestSellerTabs = [
   { label: "All", slug: "all" },
   { label: "Electronics", slug: "electronics" },
-  { label: "Home & Kitchen", slug: "home-kitchen" },
+  { label: "Kitchen", slug: "home-kitchen" },
   { label: "Beauty", slug: "beauty" },
   { label: "Fashion", slug: "fashion-accessories" },
 ];
 
 export const newsletter = {
-  title: "Be First To Know About New Deals",
+  title: "Never Miss A Deal.",
   description:
-    "Join our mailing list and receive exclusive discounts, product launches and seasonal offers.",
+    "Subscribe for exclusive offers, seasonal promotions and new product launches.",
   placeholder: "Enter your email address",
   buttonText: "Subscribe",
 };
@@ -143,16 +143,18 @@ export const sortOptions = [
 ];
 
 export const aboutSection = {
-  title: "Everyday Value. Premium Selection.",
+  title: "Shop Better. Live Smarter.",
   description:
-    "MAA PARTNERS LLC brings together quality products across electronics, home, beauty, toys, wellness, and more so families can shop confidently from one trusted store. We focus on dependable selection, everyday value, and a warm, convenient experience from browse to checkout.",
+    "GNR ECOM LLC brings together quality products across electronics, home, beauty, gaming, wellness, and more so you can shop confidently from one modern marketplace. We focus on bold selection, everyday value, and a dynamic retail experience from browse to checkout.",
   checklist: [
-    "Wide marketplace selection across 13 departments",
-    "Curated products for home, family, and lifestyle needs",
+    "Wide marketplace selection across 12 departments",
+    "Curated products for work, home, and lifestyle",
     "Dependable delivery and simple returns",
-    "Friendly support focused on everyday shoppers",
+    "Support built for modern shoppers",
   ],
   buttonText: "Learn More About Us",
   buttonLink: "/about",
   image: "/banners/about.jpg",
 };
+
+export const announcementText = "Summer Savings • Free Shipping Over $75";

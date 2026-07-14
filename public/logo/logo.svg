@@ -1,34 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="290" height="52" viewBox="0 0 290 52" fill="none">
-  <rect x="1.5" y="5" width="42" height="42" rx="13" fill="#8B1E3F"/>
-  <path d="M12 19.5H33.5L30.5 31C29.9 33.4 27.7 35 25.2 35H17.2C14.4 35 12.1 32.7 12.1 29.9L12 19.5Z" fill="#F4A261"/>
-  <path d="M16.5 18C16.5 14.4 19.4 11.5 23 11.5C26.6 11.5 29.5 14.4 29.5 18" stroke="#F4A261" stroke-width="2.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="56" viewBox="0 0 280 56" fill="none">
+  <!-- Stacked monogram block -->
+  <rect x="0" y="4" width="48" height="48" rx="10" fill="#1D3557"/>
+  <!-- Red accent slash -->
+  <path d="M38 8 L46 8 L14 48 L6 48 Z" fill="#E63946"/>
   <text
-    x="22.5"
-    y="27.5"
+    x="24"
+    y="36"
     text-anchor="middle"
-    dominant-baseline="middle"
     fill="#FFFFFF"
-    font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-size="11"
+    font-family="Manrope, Inter, system-ui, sans-serif"
+    font-size="16"
     font-weight="800"
-    letter-spacing="-0.4"
-  >MA</text>
+    letter-spacing="-0.5"
+  >GNR</text>
+  <!-- Wordmark -->
   <text
-    x="56"
-    y="22"
-    fill="#1E293B"
-    font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-size="17"
+    x="62"
+    y="26"
+    fill="#111827"
+    font-family="Manrope, Inter, system-ui, sans-serif"
+    font-size="20"
     font-weight="800"
-    letter-spacing="-0.2"
-  >MAA PARTNERS</text>
+    letter-spacing="-0.3"
+  >GNR ECOM</text>
   <text
-    x="56"
-    y="39"
-    fill="#8B1E3F"
-    font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    x="62"
+    y="44"
+    fill="#E63946"
+    font-family="Manrope, Inter, system-ui, sans-serif"
     font-size="11"
     font-weight="700"
-    letter-spacing="3.4"
+    letter-spacing="4"
   >LLC</text>
 </svg>

@@ -2,14 +2,14 @@ import { company } from "./company";
 
 export const faqItems = [
   {
-    question: "What types of products does MAA PARTNERS LLC sell?",
+    question: `What types of products does ${company.name} sell?`,
     answer:
-      "We offer a wide range of products across 13 categories including electronics, home & kitchen, bathroom essentials, beauty, educational toys, gaming, office, sports, fashion, baby, health, and pet supplies.",
+      "We offer a wide range of products across 12 categories including electronics, kitchen, home, bathroom, beauty, gaming, sports, office, fashion, baby, health, and pet supplies.",
   },
   {
     question: "Do you offer free shipping?",
     answer:
-      "Yes. We offer free standard shipping on all orders over $50 within the contiguous United States. Orders under $50 have a flat rate of $9.99. Express shipping is available at checkout for $14.99.",
+      "Yes. We offer free standard shipping on all orders over $75 within the contiguous United States. Orders under $75 have a flat rate of $9.99. Express shipping is available at checkout for $14.99.",
   },
   {
     question: "How long does shipping take?",
@@ -55,7 +55,7 @@ export const faqItems = [
 
 export const shippingPolicy = {
   title: "Shipping Policy",
-  description: "Everything you need to know about how we deliver your MAA PARTNERS LLC orders.",
+  description: `Everything you need to know about how we deliver your ${company.name} orders.`,
   sections: [
     {
       title: "Processing Time",
@@ -66,7 +66,7 @@ export const shippingPolicy = {
       title: "Shipping Methods & Rates",
       content: "",
       list: [
-        "Standard Shipping (3–5 business days): $9.99 — FREE on orders over $50",
+        "Standard Shipping (3–5 business days): $9.99 — FREE on orders over $75",
         "Express Shipping (1–2 business days): $14.99",
         "Alaska & Hawaii: Standard shipping rates apply; delivery may take 5–7 business days",
       ],
@@ -90,7 +90,7 @@ export const shippingPolicy = {
 
 export const returnPolicy = {
   title: "Return Policy",
-  description: "We want you to love every MAA PARTNERS LLC purchase. If you're not satisfied, we're here to help.",
+  description: `We want you to love every ${company.name} purchase. If you're not satisfied, we're here to help.`,
   sections: [
     {
       title: "30-Day Return Window",
@@ -128,7 +128,7 @@ export const returnPolicy = {
 
 export const refundPolicy = {
   title: "Refund Policy",
-  description: "Our commitment to fair and transparent refunds for every MAA PARTNERS LLC order.",
+  description: `Our commitment to fair and transparent refunds for every ${company.name} order.`,
   sections: [
     {
       title: "Refund Eligibility",
@@ -163,7 +163,7 @@ export const refundPolicy = {
 
 export const privacyPolicy = {
   title: "Privacy Policy",
-  description: "Last updated: January 1, 2026. How MAA PARTNERS LLC collects, uses, and protects your information.",
+  description: `Last updated: January 1, 2026. How ${company.name} collects, uses, and protects your information.`,
   sections: [
     {
       title: "Information We Collect",
@@ -195,7 +195,7 @@ export const privacyPolicy = {
     {
       title: "Your Rights",
       content:
-        "You may request access to, correction of, or deletion of your personal data at any time by contacting us at " + company.email + ". North Carolina residents may also have rights under applicable state and federal privacy laws.",
+        "You may request access to, correction of, or deletion of your personal data at any time by contacting us at " + company.email + ". Michigan residents may also have rights under applicable state and federal privacy laws.",
     },
     {
       title: "Contact",
@@ -206,12 +206,12 @@ export const privacyPolicy = {
 
 export const termsPolicy = {
   title: "Terms & Conditions",
-  description: "Please read these terms carefully before using the MAA PARTNERS LLC website.",
+  description: `Please read these terms carefully before using the ${company.name} website.`,
   sections: [
     {
       title: "Acceptance of Terms",
       content:
-        "By accessing and using the MAA PARTNERS LLC website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website.",
+        `By accessing and using the ${company.name} website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website.`,
     },
     {
       title: "Products & Pricing",
@@ -226,17 +226,17 @@ export const termsPolicy = {
     {
       title: "Intellectual Property",
       content:
-        "All content on this website — including text, images, logos, and design — is the property of MAA PARTNERS LLC and protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without written permission.",
+        `All content on this website — including text, images, logos, and design — is the property of ${company.name} and protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without written permission.`,
     },
     {
       title: "Limitation of Liability",
       content:
-        "MAA PARTNERS LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.",
+        `${company.name} shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.`,
     },
     {
       title: "Governing Law",
       content:
-        "These terms are governed by the laws of the State of North Carolina, United States. Any disputes shall be resolved in the courts serving Forsyth County, North Carolina.",
+        "These terms are governed by the laws of the State of Michigan, United States. Any disputes shall be resolved in the courts serving Macomb County, Michigan.",
     },
   ],
 };

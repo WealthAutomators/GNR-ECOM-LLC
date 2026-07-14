@@ -53,8 +53,8 @@ export function HeaderSearchBar({ className }: HeaderSearchBarProps) {
           </button>
           <Input
             type="search"
-            placeholder="Search electronics, home essentials, beauty, toys and more..."
-            className="h-12 w-full rounded-[18px] border-border bg-muted/50 pl-10 pr-4 text-sm shadow-sm focus-visible:ring-primary/25"
+            placeholder="Search electronics, home, beauty, gaming and more..."
+            className="h-12 w-full rounded-xl border-border bg-muted/60 pl-10 pr-4 text-sm shadow-sm focus-visible:ring-primary/25"
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);

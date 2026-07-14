@@ -1,5 +1,5 @@
 {
-  "name": "value-partners",
+  "name": "gnr-ecom-llc",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "images:unsplash": "node scripts/download-unsplash-images.mjs",
+    "images:unsplash": "node scripts/fetch-unsplash-api.mjs",
     "images:products": "node scripts/download-product-images.mjs",
     "images:apply": "node scripts/apply-custom-images.mjs",
     "images:homepage": "node scripts/download-homepage-images.mjs"

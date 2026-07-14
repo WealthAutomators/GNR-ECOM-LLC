@@ -58,6 +58,8 @@ export interface Testimonial {
   rating: number;
   text: string;
   location: string;
+  avatar?: string;
+  category?: string;
 }
 
 export interface NavLink {

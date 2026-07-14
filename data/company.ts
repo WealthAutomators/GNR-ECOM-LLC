@@ -1,14 +1,14 @@
 export const company = {
-  name: "MAA PARTNERS LLC",
-  tagline: "Everyday Value. Premium Selection.",
+  name: "GNR ECOM LLC",
+  tagline: "Shop Better. Live Smarter.",
   description:
-    "MAA PARTNERS LLC is a modern family-friendly marketplace for electronics, home essentials, beauty, toys, fashion, pet care, and everyday finds selected for value, quality, and convenience.",
-  email: "maapartnersllc1@gmail.com",
+    "GNR ECOM LLC is a contemporary retail marketplace for electronics, home, beauty, gaming, fashion, and everyday essentials — bold products selected for quality, value, and modern living.",
+  email: "gnrecomllc@gmail.com",
   address: {
-    street: "1995 HAMPTON INN CT",
-    city: "WINSTON-SALEM",
-    state: "NC",
-    zip: "",
+    street: "39211 E ARCHER DR",
+    city: "HARRISON TWP",
+    state: "MI",
+    zip: "48045",
     country: "United States",
   },
   social: {
@@ -18,5 +18,5 @@ export const company = {
     pinterest: "",
   },
   hours: "Mon–Fri: 9am–6pm EST",
-  copyright: `© ${new Date().getFullYear()} MAA PARTNERS LLC. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} GNR ECOM LLC. All rights reserved.`,
 };
