@@ -8,18 +8,22 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        /* Primary: navy → red hover, white text (WCAG AA) */
-        default: "bg-primary text-white shadow-sm hover:bg-secondary hover:text-white",
-        /* Secondary: white + navy border → navy fill, white text */
+        /* Primary: navy bg + white text → red bg + white text */
+        default:
+          "bg-primary text-white shadow-sm hover:bg-secondary hover:text-white focus-visible:text-white",
+        /* Secondary: white bg + navy text → navy bg + white text */
         secondary:
-          "border-2 border-primary bg-white text-primary shadow-sm hover:bg-primary hover:text-white",
+          "border-2 border-primary bg-white text-primary shadow-sm hover:bg-primary hover:text-white focus-visible:text-white",
+        /* Outline: transparent + navy → navy bg + white text */
         outline:
-          "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white",
-        ghost: "text-foreground hover:bg-muted",
-        /* Sale: warm orange + dark text */
-        emerald: "bg-accent text-foreground shadow-sm hover:bg-accent/90 hover:text-foreground",
-        accent: "bg-accent text-foreground hover:bg-accent/90",
-        link: "h-auto p-0 text-primary underline-offset-4 hover:text-secondary hover:underline",
+          "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white focus-visible:text-white",
+        ghost: "bg-transparent text-foreground hover:bg-muted hover:text-foreground",
+        /* Sale / accent CTA: orange + dark text (never white-on-orange for AA) */
+        emerald:
+          "bg-accent text-foreground shadow-sm hover:bg-[#e08f4d] hover:text-foreground",
+        accent:
+          "bg-accent text-foreground hover:bg-[#e08f4d] hover:text-foreground",
+        link: "h-auto bg-transparent p-0 text-primary underline-offset-4 hover:bg-transparent hover:text-secondary hover:underline",
       },
       size: {
         default: "h-11 px-6 py-2",

@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { StarRating } from "@/components/ui/star-rating";
 import { QuantitySelector } from "@/components/ui/quantity-selector";
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 interface ProductDetailProps {
   product: Product;
@@ -136,9 +137,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 variant="secondary"
                 onClick={() => toggleWishlist(product.id)}
                 aria-label={inWishlist ? "Remove from wishlist" : "Add to wishlist"}
-                className="transition-transform active:scale-95"
+                className="group/wish transition-transform active:scale-95"
               >
-                <Heart className={`h-4 w-4 transition-colors ${inWishlist ? "fill-accent text-accent" : ""}`} />
+                <Heart
+                  className={cn(
+                    "h-4 w-4 transition-colors",
+                    inWishlist
+                      ? "fill-secondary text-secondary group-hover/wish:fill-white group-hover/wish:text-white"
+                      : ""
+                  )}
+                />
               </Button>
             </div>
 

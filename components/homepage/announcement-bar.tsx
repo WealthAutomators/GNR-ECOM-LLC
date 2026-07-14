@@ -12,7 +12,7 @@ export function AnnouncementBar() {
           {announcementText}{" "}
           <Link
             href="/shop?sale=true"
-            className="ml-1 font-bold underline underline-offset-2 transition-colors hover:text-white/90"
+            className="ml-1 font-bold text-white underline underline-offset-2 transition-colors hover:text-white"
           >
             Shop Now →
           </Link>

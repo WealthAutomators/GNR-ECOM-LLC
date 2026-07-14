@@ -45,7 +45,12 @@ export function HeroBanner() {
               <Link href={slide.ctaLink}>{slide.ctaText}</Link>
             </Button>
             {slide.secondaryCtaText && slide.secondaryCtaLink && (
-              <Button asChild size="lg" variant="secondary" className="border-white text-primary hover:border-primary">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="border-white bg-white text-primary hover:border-primary hover:bg-primary hover:text-white"
+              >
                 <Link href={slide.secondaryCtaLink}>{slide.secondaryCtaText}</Link>
               </Button>
             )}

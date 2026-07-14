@@ -96,11 +96,11 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
             <Button
               variant="secondary"
               size="icon"
-              className="h-9 w-9 rounded-full shadow-sm transition-transform hover:scale-110"
+              className="group/btn h-9 w-9 rounded-full shadow-sm transition-transform hover:scale-110"
               onClick={() => toggleWishlist(product.id)}
               aria-label={inWishlist ? "Remove from wishlist" : "Add to wishlist"}
             >
-              <Heart className={cn("h-4 w-4 transition-colors", inWishlist && "fill-primary text-primary")} />
+              <Heart className={cn("h-4 w-4 transition-colors", inWishlist && "fill-secondary text-secondary group-hover/btn:fill-white group-hover/btn:text-white")} />
             </Button>
             <Button
               variant="secondary"

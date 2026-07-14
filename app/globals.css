@@ -87,10 +87,7 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--primary);
-}
+/* Color transitions live on components.
+   Do NOT set a global a:hover color — it is unlayered and overrides
+   Tailwind button hover:text-* on Link (asChild), making label text
+   disappear when hover bg matches primary. */
